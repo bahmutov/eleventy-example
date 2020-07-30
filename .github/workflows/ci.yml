@@ -1,6 +1,8 @@
 name: ci
 on:
   push
+  deployment
+  deployment_status
 jobs:
   show-event:
     runs-on: ubuntu-latest
