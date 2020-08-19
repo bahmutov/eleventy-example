@@ -8,7 +8,10 @@ jobs:
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
+          ENV_CONTEXT: ${{ toJson(env) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
+          echo "$ENV_CONTEXT"
       - name: Checkout 🛎
         uses: actions/checkout@v1
       - name: Run Cypress 🌲
