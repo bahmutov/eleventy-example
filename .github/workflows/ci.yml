@@ -9,3 +9,9 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
+      - name: Checkout 🛎
+        uses: actions/checkout@v1
+      - name: Run Cypress 🌲
+        uses: cypress-io/github-action@v2
+        env:
+          CYPRESS_BASE_URL: https://eleventy-example-git-${GITHUB_HEAD_REF}.bahmutov.vercel.app
