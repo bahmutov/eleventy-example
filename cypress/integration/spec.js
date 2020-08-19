@@ -6,7 +6,7 @@ describe("11ty", () => {
     cy.visit("/");
     cy.contains("Hi there");
     cy.contains("a", "the README").click();
-    cy.location("pathname").should("match", /\/README\/$/);
+    cy.location("pathname").should("include", "/README");
     cy.go("back");
     cy.contains("Hi there"); // back on the index page
   });
