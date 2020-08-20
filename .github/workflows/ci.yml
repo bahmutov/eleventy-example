@@ -21,7 +21,7 @@ jobs:
         if: ${{ success() }}
         # set the merge commit status check
         # using GitHub REST API
-        # see https://github.com/bahmutov/sudoku/blob/master/scripts/set-gh-check.js
+        # see https://docs.github.com/en/rest/reference/repos#create-a-commit-status
         run: |
           curl --request POST \
           --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
@@ -30,7 +30,8 @@ jobs:
           --data '{
             "context": "e2e",
             "state": "success",
-            "description": "Cypress tests passed"
+            "description": "Cypress tests passed",
+            "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           }'
 
       - name: Cypress tests 🚨
@@ -43,5 +44,6 @@ jobs:
           --data '{
             "context": "e2e",
             "state": "failure",
-            "description": "Cypress tests failed"
+            "description": "Cypress tests failed",
+            "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           }'
