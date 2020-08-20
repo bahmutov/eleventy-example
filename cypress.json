@@ -2,5 +2,6 @@
   "baseUrl": "http://localhost:8080",
   "fixturesFolder": false,
   "supportFile": false,
-  "pluginsFile": false
+  "pluginsFile": false,
+  "projectId": "y2sysj"
 }
