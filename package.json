@@ -1,8 +1,9 @@
 {
   "name": "eleventy-example",
   "version": "1.0.0",
-  "description": "",
+  "description": "Test the Preview Vercel Deploys",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy"
