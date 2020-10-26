@@ -12,7 +12,7 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@v1
       - name: Run Cypress 🌲
-        uses: cypress-io/github-action@v2.2.7
+        uses: cypress-io/github-action@v2.3.3
         with:
           record: true
           command: npm test
