@@ -12,10 +12,9 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@v1
       - name: Run Cypress 🌲
-        uses: cypress-io/github-action@v2.2.7
+        uses: cypress-io/github-action@v2
         with:
-          record: true
-          command: npm test
+          command: npm test -- --record
         env:
           CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
