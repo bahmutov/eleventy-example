@@ -1,0 +1,12 @@
+name: main
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v2
+      - name: Run Cypress 🌲
+        uses: cypress-io/github-action@v2.2.7
+        with:
+          start: npm start
