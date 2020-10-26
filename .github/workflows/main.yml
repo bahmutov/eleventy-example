@@ -10,3 +10,4 @@ jobs:
         uses: cypress-io/github-action@v2.2.7
         with:
           start: npm start
+          command: npm test

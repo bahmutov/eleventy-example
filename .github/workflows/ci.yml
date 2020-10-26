@@ -15,6 +15,7 @@ jobs:
         uses: cypress-io/github-action@v2.2.7
         with:
           record: true
+          command: npm test
         env:
           CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
