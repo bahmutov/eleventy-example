@@ -6,14 +6,16 @@
   "private": true,
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "test": "cypress-expect run --passing 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "0.11.0",
-    "cypress": "4.12.1",
+    "cypress": "5.4.0",
+    "cypress-expect": "2.1.2",
     "prettier": "2.0.5"
   }
 }
