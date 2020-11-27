@@ -16,3 +16,9 @@ jobs:
 
       - name: Print GitHub env variables 🖨
         run: npx @bahmutov/print-env GITHUB
+
+      # let's get the source code and find branch using the commit SHA
+      - name: Checkout 🛎
+        uses: actions/checkout@v2
+      - name: Print branch 🌳
+        run: git name-rev $GITHUB_SHA
