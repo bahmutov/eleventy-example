@@ -20,5 +20,8 @@ jobs:
       # let's get the source code and find branch using the commit SHA
       - name: Checkout 🛎
         uses: actions/checkout@v2
+        with:
+          # fetch all commits so we can find the branch
+          fetch-depth: 0
       - name: Print branch 🌳
-        run: git name-rev $GITHUB_SHA
+        run: git name-rev --name-only $GITHUB_SHA
