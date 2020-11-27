@@ -9,8 +9,13 @@ jobs:
     steps:
       - name: Print URL 🖨
         run: echo Testing URL ${{ github.event.deployment_status.target_url }}
+
+      - name: Print GitHub env variables 🖨
+        run: npx @bahmutov/print-env GITHUB
+
       - name: Checkout 🛎
         uses: actions/checkout@v1
+
       - name: Run Cypress 🌲
         uses: cypress-io/github-action@v2
         with:
