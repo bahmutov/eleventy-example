@@ -6,6 +6,17 @@ jobs:
     steps:
       - name: Checkout 🛎
         uses: actions/checkout@v2
+
+      # https://docs.github.com/en/free-pro-team@latest/actions/reference/context-and-expression-syntax-for-github-actions
+      # print the event by first converting it into JSON object
+      - name: Print GitHub event 🖨
+        env:
+          GITHUB_EVENT: ${{ toJson(github.event) }}
+        run: echo "$GITHUB_EVENT"
+
+      - name: Print GitHub env variables 🖨
+        run: npx @bahmutov/print-env GITHUB
+
       - name: Run Cypress 🌲
         uses: cypress-io/github-action@v2
         with:
