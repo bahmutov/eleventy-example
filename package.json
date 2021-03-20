@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "0.11.1",
+    "@11ty/eleventy": "0.12.1",
     "cypress": "6.8.0",
     "cypress-expect": "2.2.1",
     "prettier": "2.2.1"
