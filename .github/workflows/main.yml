@@ -15,10 +15,10 @@ jobs:
         run: echo "$GITHUB_EVENT"
 
       - name: Print GitHub env variables 🖨
-        run: npx @bahmutov/print-env GITHUB
+        run: npx @acahet/print-env GITHUB
 
       - name: Run Cypress 🌲
         uses: cypress-io/github-action@v2
         with:
-          start: npm start
-          command: npm test
+          start: yarn start
+          command: yarn test

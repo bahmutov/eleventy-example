@@ -11,7 +11,7 @@ jobs:
         run: echo Testing URL ${{ github.event.deployment_status.target_url }}
 
       - name: Print GitHub env variables 🖨
-        run: npx @bahmutov/print-env GITHUB
+        run: npx @acahet/print-env GITHUB
 
       - name: Checkout 🛎
         uses: actions/checkout@v1

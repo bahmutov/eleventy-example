@@ -15,7 +15,7 @@ jobs:
         run: echo "$GITHUB_EVENT"
 
       - name: Print GitHub env variables 🖨
-        run: npx @bahmutov/print-env GITHUB
+        run: npx @acahet/print-env GITHUB
 
       # let's get the source code and find branch using the commit SHA
       - name: Checkout 🛎
