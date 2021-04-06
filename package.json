@@ -14,7 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "0.12.1",
-    "cypress": "6.8.0",
+    "cypress": "6.9.1",
     "cypress-expect": "2.2.1",
     "prettier": "2.2.1"
   }
