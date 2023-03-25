@@ -15,7 +15,7 @@
   "devDependencies": {
     "@11ty/eleventy": "0.12.1",
     "cypress": "6.9.1",
-    "cypress-expect": "2.5.1",
+    "cypress-expect": "2.5.3",
     "prettier": "2.5.1"
   }
 }
