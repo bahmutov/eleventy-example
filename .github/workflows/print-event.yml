@@ -19,7 +19,7 @@ jobs:
 
       # let's get the source code and find branch using the commit SHA
       - name: Checkout 🛎
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           # fetch all commits so we can find the branch
           fetch-depth: 0
